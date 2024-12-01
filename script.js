@@ -399,7 +399,11 @@ let timer;
 let username;
 
 function startQuiz() {
-    username = document.getElementById('username').value;
+    const username = document.getElementById('username').value.trim(); // Get and trim the username input
+    if (!username) { // Check if username is empty
+        alert('Please enter your name to start the quiz!'); // Show an alert if no name is entered
+        return; // Stop the function
+    }
     document.getElementById('start-screen').style.display = 'none';
     document.getElementById('quiz-screen').style.display = 'block';
     selectRandomQuestions();
