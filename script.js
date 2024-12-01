@@ -49,7 +49,7 @@ let questions = [
     { question: "Which continent is known as the birthplace of humanity?", options: ["Asia", "Africa", "Europe", "South America"], correct: 1 }
 ];
 
-
+let selectedQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 let timer;
@@ -59,16 +59,23 @@ function startQuiz() {
     username = document.getElementById('username').value;
     document.getElementById('start-screen').style.display = 'none';
     document.getElementById('quiz-screen').style.display = 'block';
+    selectRandomQuestions();
     loadQuestion();
 }
 
+function selectRandomQuestions() {
+    let shuffledQuestions = questions.sort(() => 0.5 - Math.random());
+    selectedQuestions = shuffledQuestions.slice(0, 15);
+}
+
 function loadQuestion() {
-    if (currentQuestionIndex >= questions.length) {
+    if (currentQuestionIndex >= selectedQuestions.length) {
         showResults();
         return;
     }
 
-    let question = questions[currentQuestionIndex];
+    let question = selectedQuestions[currentQuestionIndex];
+    document.getElementById('question-number').innerText = `Question ${currentQuestionIndex + 1} of 15`;
     document.getElementById('question').innerText = question.question;
     let optionsContainer = document.getElementById('options');
     optionsContainer.innerHTML = '';
@@ -98,7 +105,7 @@ function startTimer() {
 
 function checkAnswer(selectedIndex) {
     clearInterval(timer);
-    let question = questions[currentQuestionIndex];
+    let question = selectedQuestions[currentQuestionIndex];
     let buttons = document.querySelectorAll('#options button');
     if (selectedIndex === question.correct) {
         buttons[selectedIndex].classList.add('correct');
@@ -118,11 +125,11 @@ function nextQuestion() {
 function showResults() {
     document.getElementById('quiz-screen').style.display = 'none';
     document.getElementById('result-screen').style.display = 'block';
-    document.getElementById('result-message').innerText = `Congratulations, ${username}! You scored ${score} out of ${questions.length}.`;
+    document.getElementById('result-message').innerText = `Congratulations, ${username}! You scored ${score} out of 15.`;
 }
 
 function shareResults() {
-    let shareText = `I scored ${score} out of ${questions.length} in the Quiz Game! Try it yourself: `;
+    let shareText = `I scored ${score} out of 15 in the Quiz Game! Try it yourself: [Game URL]`;
     if (navigator.share) {
         navigator.share({
             title: 'Quiz Game Results',
