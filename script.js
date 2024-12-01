@@ -129,7 +129,7 @@ function showResults() {
 }
 
 function shareResults() {
-    let shareText = `I scored ${score} out of 15 in the Quiz Game! Try it yourself: [Game URL]`;
+    let shareText = `I scored ${score} out of 15 in the Quiz Game! Try it yourself: `;
     if (navigator.share) {
         navigator.share({
             title: 'Quiz Game Results',
