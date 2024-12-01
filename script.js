@@ -257,3 +257,7 @@ function shareResults() {
         alert('Share not supported on this browser. Copy the link and share manually: ' + shareText);
     }
 }
+
+function tryAgain() {
+    location.reload();
+}
