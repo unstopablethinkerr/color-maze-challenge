@@ -63,7 +63,7 @@ body {
     margin: 8px 0;
     border: 2px solid transparent;
     border-radius: 10px;
-    background: linear-gradient(135deg, #E5C31A, #1A3CE5);
+    background: linear-gradient(135deg, #EAB815, #EEC644);
     color: white;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
@@ -90,4 +90,26 @@ body {
 .wrong {
     background: linear-gradient(135deg, #e74c3c, #c0392b) !important;
     color: white !important;
+}
+
+#try-again-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(90deg, #ff7eb3, #ff758c);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#try-again-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#try-again-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
