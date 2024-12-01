@@ -213,8 +213,6 @@ let questions = [
     { "question": "Who is known as the Father of Genetics?", "options": ["Charles Darwin", "Gregor Mendel", "Francis Crick", "James Watson"], "correct": 1 },
     { "question": "Who developed the first vaccine?", "options": ["Edward Jenner", "Louis Pasteur", "Alexander Fleming", "Jonas Salk"], "correct": 0 },
     { "question": "What is the freezing point of water?", "options": ["0°C", "32°C", "100°C", "10°C"], "correct": 0 },
-    let moreQuestions = [
-    // Capitals of Countries
     { question: "What is the capital of Australia?", options: ["Sydney", "Melbourne", "Canberra", "Brisbane"], correct: 2 },
     { question: "What is the capital of Brazil?", options: ["Rio de Janeiro", "São Paulo", "Brasília", "Salvador"], correct: 2 },
     { question: "What is the capital of Canada?", options: ["Toronto", "Vancouver", "Ottawa", "Montreal"], correct: 2 },
