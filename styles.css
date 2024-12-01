@@ -19,6 +19,7 @@ body {
     grid-template-rows: repeat(10, 50px);
     gap: 2px;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .tile {
