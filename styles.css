@@ -1,82 +1,16 @@
 /* styles.css */
 body {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
     font-family: Arial, sans-serif;
-}
-
-#game-container {
     text-align: center;
+    margin: 20px;
 }
 
-#maze {
-    display: grid;
-    grid-template-columns: repeat(10, 50px);
-    grid-template-rows: repeat(10, 50px);
-    gap: 2px;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.tile {
-    width: 50px;
-    height: 50px;
-    transition: background-color 0.3s;
-    position: relative;
-}
-
-.tile:hover::after {
-    content: attr(data-color);
-    position: absolute;
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 5px;
-    border-radius: 3px;
-    font-size: 12px;
-    pointer-events: none;
-    white-space: nowrap;
-}
-
-#ui {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#timer, #score {
-    margin: 0 10px;
+#quiz-container {
+    margin-top: 20px;
 }
 
 button {
     padding: 10px 20px;
-    margin: 0 10px;
+    margin-top: 20px;
     cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    #maze {
-        grid-template-columns: repeat(8, 40px);
-        grid-template-rows: repeat(8, 40px);
-    }
-
-    .tile {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-@media (max-width: 480px) {
-    #maze {
-        grid-template-columns: repeat(6, 30px);
-        grid-template-rows: repeat(6, 30px);
-    }
-
-    .tile {
-        width: 30px;
-        height: 30px;
-    }
 }
