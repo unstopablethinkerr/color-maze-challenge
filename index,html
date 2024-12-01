@@ -16,6 +16,8 @@
             <button id="hint-button">Hint</button>
         </div>
     </div>
+    <audio id="background-music" src="background.mp3" loop></audio>
+    <audio id="collect-sound" src="collect.mp3"></audio>
     <script src="script.js"></script>
 </body>
 </html>
